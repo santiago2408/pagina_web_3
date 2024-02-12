@@ -1,0 +1,76 @@
+/*clase que se aplica a todas las tablas de la pagina web*/
+table {
+    width: 20%;
+}
+
+/*hover que se aplica al pasar el cursor por la cuadricula (también hay tr para toda la fila)*/
+td:hover {
+    background-color: #9af7ce;
+}
+
+ /*clase que se aplica a todo el body*/
+body {
+    font-family: "Copperplate", sans-serif;
+}
+
+
+/*Los selectores de clase se denotan con un punto y a diferencia del id (con #) se pueden poner varias veces*/
+.destacado {
+    font-weight: bold;
+}
+
+/*Un div es un contenedor de informacion*/
+/*Lo que hace .miDiv 1,2 o 3 es agregar un estilo al div seleccionado*/
+.miDiv1 {
+    background-color: lightblue;
+    border-radius: 30px; /*esto es para achatar las puntas del div*/
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /*esto es el color de la sombra y tamaño*/
+    position: relative; /* Posicion relativa al tamaño de la pagina */
+}
+
+.miDiv2 {
+    background-color: rgb(139, 227, 155);
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    position: relative; 
+}
+
+.miDiv3 {
+    background-color: rgb(242, 129, 233);
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    position: relative; 
+}
+
+
+.miBlanco {
+    font-family: "helvetica neue", helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 200, 0.6);
+    background: rgba(0, 0, 200, 0.3);
+    color: rgba(0, 0, 200, 0.6);
+    box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+    border-radius: 10px;
+    padding: 3px 10px;
+    display: inline-table;
+    cursor: pointer; /*cuando se pasa el mouse por las casillas con este estilo el apuntador cambia de forma*/
+}
+
+.nombreInput {
+    width: calc(100% - 40px); /*Ancho del cuadro de texto*/
+    margin: 5px auto; /*Centra el cuadro de texto horizontalmente*/
+    display: none; /*Oculta el cuadro de texto inicialmente*/
+}
+
+
+body {
+    font-family: "Copperplate", sans-serif;
+}
