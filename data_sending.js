@@ -1,17 +1,36 @@
-function mostrarInput(){
-    const idEspacio = document.getElementById("espacio1")
-    const button = document.getElementById('boton');
-    function changeContent() {
-        div.innerHTML = '<p>New HTML content!</p>';
-      }
+function enviarDatos() {
+	var datos = recogerDatos(); // Obtener los datos de la tabla
 
-    button.addEventListener('click', changeContent);
+	// Construir la URL con los datos como parámetros de consulta
+	var urlDestino = "pagina_3_de_envio.html?" + new URLSearchParams(datos).toString();
+
+	// Redirigir al usuario a la página de destino
+	window.location.href = urlDestino;
 }
 
-function enviarDatos(){
-
+function recogerDatos() {
+	var datos = {};
+	// Obtener los datos de la tabla y guardarlos en el diccionario
+	for (var i = 1; i <= 8; i++) {
+		var espacio = document.getElementById("espacio" + i).value;
+		datos["espacio" + i] = espacio;
+	}
+	return datos;
 }
 
-function llenarDatos(){
+function prepararDatos() {
+	// Obtener los parámetros de la URL
+	var parametros = new URLSearchParams(window.location.search);
 
+	// Obtener los valores de los parámetros y mostrarlos en la tabla
+	for (var i = 1; i <= 8; i++) {
+		var espacio = parametros.get("espacio" + i);
+		document.getElementById("espacio" + i).textContent = espacio;
+	}
 }
+
+
+
+function presionBoton(){
+	window.onload = prepararDatos();
+}           
