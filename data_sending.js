@@ -17,7 +17,7 @@ function recogerDatos() {
 			datos["espacio" + i] = espacio;
 		}
 		else {
-			alert ("Hay espacios en blanco")
+			alert ("Hay espacios en blanco");
 		}
 
 			
