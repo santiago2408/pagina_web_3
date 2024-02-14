@@ -13,7 +13,7 @@ function recogerDatos() {
 	// Obtener los datos de la tabla y guardarlos en el diccionario
 	for (var i = 1; i <= 8; i++) {
 		var espacio = document.getElementById("espacio" + i).value;
-		if espacio != " " {
+		if (espacio != " ") {
 			datos["espacio" + i] = espacio;
 		}
 		else {
