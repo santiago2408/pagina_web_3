@@ -40,4 +40,9 @@ function prepararDatos() {
 
 function presionBoton(){
 	window.onload = prepararDatos();
-}           
+}
+
+function regresar() {
+	// Redirigir al usuario a la página anterior
+	window.history.back();
+}
