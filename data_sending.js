@@ -10,20 +10,30 @@ function enviarDatos() {
 
 function recogerDatos() {
 	var datos = {};
+
 	// Obtener los datos de la tabla y guardarlos en el diccionario
-	for (var i = 1; i <= 8; i++) {
-		var espacio = document.getElementById("espacio" + i).value;
-		if (espacio != " ") {
-			datos["espacio" + i] = espacio;
+
+	var paso = 1
+	while (paso != 9){
+		var espacio = document.getElementById("espacio" + paso).value;
+			
+		if (espacio == ""){
+			alert("Llena el o los espacios que te faltan por llenar")
 		}
-		else {
-			alert ("Hay espacios en blanco");
+		else{
+			datos["espacio" + paso] = espacio;
 		}
 
-			
+		while(espacio == ""){
+			setTimeout(none, 2000);}
+
+		paso+= 1
+
 	}
+
 	return datos;
-}
+	}
+
 
 function prepararDatos() {
 	// Obtener los parámetros de la URL
@@ -36,8 +46,6 @@ function prepararDatos() {
 	}
 }
 
-
-
 function presionBoton(){
 	window.onload = prepararDatos();
 }
@@ -45,4 +53,11 @@ function presionBoton(){
 function regresar() {
 	// Redirigir al usuario a la página anterior
 	window.history.back();
+}
+
+function enviarDatosPagina2() {
+	
+	var urlDestino = "pagina_2_con_estilos_css.html?";
+
+	window.location.href = urlDestino;
 }
